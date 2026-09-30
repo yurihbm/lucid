@@ -7,46 +7,10 @@ on:
 
 jobs:
   release:
-    runs-on: xcode-27
-    environment: main
+    uses: yurihbm/homebrew-app-release/.github/workflows/release.yml@aeecc50f0e87ca0d8f22203eacbe06afe221201c # v1.0.0
     permissions:
       contents: write
-
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-
-      - name: Test
-        run: xcodebuild test -project Lucid.xcodeproj -scheme Lucid -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO
-
-      - name: Archive
-        run: xcodebuild -project Lucid.xcodeproj -scheme Lucid -configuration Release -archivePath build/Lucid.xcarchive CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM= MARKETING_VERSION="${GITHUB_REF_NAME#v}" archive
-
-      - name: Zip .app
-        run: ditto -c -k --sequesterRsrc --keepParent build/Lucid.xcarchive/Products/Applications/Lucid.app Lucid.zip
-
-      - name: Create release
-        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
-        with:
-          files: Lucid.zip
-          generate_release_notes: true
-
-      - name: Update Homebrew cask
-        env:
-          GH_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
-        run: |
-          VERSION="${GITHUB_REF_NAME#v}"
-          SHA256=$(shasum -a 256 Lucid.zip | cut -d ' ' -f1)
-
-          gh auth setup-git
-          gh repo clone yurihbm/homebrew-apps tap
-          cd tap
-
-          sed -i '' "s/version \".*\"/version \"$VERSION\"/" Casks/lucid.rb
-          sed -i '' "s/sha256 \".*\"/sha256 \"$SHA256\"/" Casks/lucid.rb
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -am "lucid $VERSION" || exit 0
-          git push
+    with:
+      project: Lucid.xcodeproj
+      scheme: Lucid
+      cask: lucid
