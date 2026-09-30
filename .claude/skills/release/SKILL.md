@@ -23,13 +23,33 @@ The Homebrew-cask-update step needs write access to a different repo (`homebrew-
 
 ## Steps to cut a release
 
-1. **Sync to the latest `main`.** Releases must always be cut from the newest shared state, not a stale local branch:
+1. **Check for work in progress before touching anything.** The release requires checking out `main`, so first inspect the current state (on whatever branch the user is on):
+   ```sh
+   git status --porcelain=v2 --branch
+   git fetch origin
+   ```
+   Also check `.git/` for `MERGE_HEAD`, `rebase-merge/`, `rebase-apply/`, `CHERRY_PICK_HEAD`, `REVERT_HEAD`, or `BISECT_LOG`.
+
+   If any of the scenarios below apply, **stop, tell the user exactly what you found (branch, files, commits), and ask how to proceed**. Never pick an option on your own, and never rely on `git checkout` silently carrying uncommitted changes over to `main`.
+
+   | Scenario | Options to offer |
+   |---|---|
+   | Uncommitted changes (staged, unstaged, or untracked files), on `main` or any other branch | **Stash** (`git stash push -u -m "wip before release"`), **commit** on the current branch, **discard**, or **stop the release** |
+   | A merge, rebase, cherry-pick, revert, or bisect is in progress | Let the user finish or abort it themselves, or **stop the release**. Don't finish or abort it for them. |
+   | On another branch with commits not in `origin/main` | Remind the user that those commits **won't be in the release**. Options: **continue anyway** (the branch stays as-is), or **stop** so they can merge it first |
+   | Local `main` has unpushed commits (ahead of `origin/main`) | Pushing the tag would ship commits that were never pushed to `main` or tested by `test.yml`. Options: **push `main` first** (wait for `test.yml` to pass), or **stop**. |
+   | Local `main` diverged from `origin/main` | **Stop.** The user has to reconcile it. |
+
+   Notes on each option:
+   - **Commit:** a commit on a branch other than `main` still won't be in the release. A commit on `main` must be pushed (and pass `test.yml`) before tagging. Say this when offering the option.
+   - **Discard:** destructive. List exactly what will be lost (`git status`, `git diff --stat`, untracked files), then get explicit confirmation before running `git restore --staged --worktree .` / `git clean -fd`.
+   - **Stash:** after the release, remind the user to go back to their branch and run `git stash pop`. If they were on another branch, tell them its name.
+
+   Once the working tree is clean and there are no blockers, sync to the latest `main`:
    ```sh
    git checkout main
-   git fetch origin
-   git pull origin main
+   git pull --ff-only origin main
    ```
-   If there's uncommitted work that isn't yours to discard, or local commits that diverge from `origin/main`, stop and ask before proceeding.
 
 2. **Check whether the current commit already has a release.** Don't create a duplicate tag/release for a commit that's already shipped:
    ```sh
