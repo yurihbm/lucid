@@ -14,11 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Build
-        run: xcodebuild -project Lucid.xcodeproj -scheme Lucid -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO CONFIGURATION_BUILD_DIR=build build
+      - name: Archive
+        run: xcodebuild -project Lucid.xcodeproj -scheme Lucid -configuration Release -archivePath build/Lucid.xcarchive CODE_SIGNING_ALLOWED=NO archive
 
       - name: Zip .app
-        run: ditto -c -k --sequesterRsrc --keepParent build/Lucid.app Lucid.zip
+        run: ditto -c -k --sequesterRsrc --keepParent build/Lucid.xcarchive/Products/Applications/Lucid.app Lucid.zip
 
       - name: Create release
         uses: softprops/action-gh-release@v3
