@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		ABF57D09306D4D7D00E59258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABF57CF3306D4D7C00E59258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABF57CFA306D4D7C00E59258;
+			remoteInfo = Lucid;
+		};
+		ABF57D13306D4D7D00E59258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABF57CF3306D4D7C00E59258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABF57CFA306D4D7C00E59258;
+			remoteInfo = Lucid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABF57CFB306D4D7C00E59258 /* Lucid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lucid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF57D08306D4D7D00E59258 /* LucidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LucidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF57D12306D4D7D00E59258 /* LucidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LucidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		ABF57D24306D4F3A00E59258 /* Exceptions for "Lucid" folder in "Lucid" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = ABF57CFA306D4D7C00E59258 /* Lucid */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		ABF57CFD306D4D7C00E59258 /* Lucid */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				ABF57D24306D4F3A00E59258 /* Exceptions for "Lucid" folder in "Lucid" target */,
+			);
+			path = Lucid;
+			sourceTree = "<group>";
+		};
+		ABF57D0B306D4D7D00E59258 /* LucidTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LucidTests;
+			sourceTree = "<group>";
+		};
+		ABF57D15306D4D7D00E59258 /* LucidUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LucidUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABF57CF8306D4D7C00E59258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		ABF57D05306D4D7D00E59258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		ABF57D0F306D4D7D00E59258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABF57CF2306D4D7C00E59258 = {
+			isa = PBXGroup;
+			children = (
+				ABF57CFD306D4D7C00E59258 /* Lucid */,
+				ABF57D0B306D4D7D00E59258 /* LucidTests */,
+				ABF57D15306D4D7D00E59258 /* LucidUITests */,
+				ABF57CFC306D4D7C00E59258 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABF57CFC306D4D7C00E59258 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABF57CFB306D4D7C00E59258 /* Lucid.app */,
+				ABF57D08306D4D7D00E59258 /* LucidTests.xctest */,
+				ABF57D12306D4D7D00E59258 /* LucidUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABF57CFA306D4D7C00E59258 /* Lucid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABF57D1A306D4D7D00E59258 /* Build configuration list for PBXNativeTarget "Lucid" */;
+			buildPhases = (
+				ABF57CF7306D4D7C00E59258 /* Sources */,
+				ABF57CF8306D4D7C00E59258 /* Frameworks */,
+				ABF57CF9306D4D7C00E59258 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				ABF57CFD306D4D7C00E59258 /* Lucid */,
+			);
+			name = Lucid;
+			productName = Lucid;
+			productReference = ABF57CFB306D4D7C00E59258 /* Lucid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABF57D07306D4D7D00E59258 /* LucidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABF57D1D306D4D7D00E59258 /* Build configuration list for PBXNativeTarget "LucidTests" */;
+			buildPhases = (
+				ABF57D04306D4D7D00E59258 /* Sources */,
+				ABF57D05306D4D7D00E59258 /* Frameworks */,
+				ABF57D06306D4D7D00E59258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABF57D0A306D4D7D00E59258 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				ABF57D0B306D4D7D00E59258 /* LucidTests */,
+			);
+			name = LucidTests;
+			productName = LucidTests;
+			productReference = ABF57D08306D4D7D00E59258 /* LucidTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ABF57D11306D4D7D00E59258 /* LucidUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABF57D20306D4D7D00E59258 /* Build configuration list for PBXNativeTarget "LucidUITests" */;
+			buildPhases = (
+				ABF57D0E306D4D7D00E59258 /* Sources */,
+				ABF57D0F306D4D7D00E59258 /* Frameworks */,
+				ABF57D10306D4D7D00E59258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABF57D14306D4D7D00E59258 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				ABF57D15306D4D7D00E59258 /* LucidUITests */,
+			);
+			name = LucidUITests;
+			productName = LucidUITests;
+			productReference = ABF57D12306D4D7D00E59258 /* LucidUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABF57CF3306D4D7C00E59258 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					ABF57CFA306D4D7C00E59258 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					ABF57D07306D4D7D00E59258 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = ABF57CFA306D4D7C00E59258;
+					};
+					ABF57D11306D4D7D00E59258 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = ABF57CFA306D4D7C00E59258;
+					};
+				};
+			};
+			buildConfigurationList = ABF57CF6306D4D7C00E59258 /* Build configuration list for PBXProject "Lucid" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"pt-BR",
+				Base,
+			);
+			mainGroup = ABF57CF2306D4D7C00E59258;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = ABF57CFC306D4D7C00E59258 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABF57CFA306D4D7C00E59258 /* Lucid */,
+				ABF57D07306D4D7D00E59258 /* LucidTests */,
+				ABF57D11306D4D7D00E59258 /* LucidUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABF57CF9306D4D7C00E59258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		ABF57D06306D4D7D00E59258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		ABF57D10306D4D7D00E59258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABF57CF7306D4D7C00E59258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		ABF57D04306D4D7D00E59258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		ABF57D0E306D4D7D00E59258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABF57D0A306D4D7D00E59258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABF57CFA306D4D7C00E59258 /* Lucid */;
+			targetProxy = ABF57D09306D4D7D00E59258 /* PBXContainerItemProxy */;
+		};
+		ABF57D14306D4D7D00E59258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABF57CFA306D4D7C00E59258 /* Lucid */;
+			targetProxy = ABF57D13306D4D7D00E59258 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ABF57D18306D4D7D00E59258 /* Debug configuration for PBXProject "Lucid" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YH282597XR;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABF57D19306D4D7D00E59258 /* Release configuration for PBXProject "Lucid" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YH282597XR;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		ABF57D1B306D4D7D00E59258 /* Debug configuration for PBXNativeTarget "Lucid" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = LucidIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YH282597XR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lucid/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yurihbmaciel.Lucid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ABF57D1C306D4D7D00E59258 /* Release configuration for PBXNativeTarget "Lucid" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = LucidIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YH282597XR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lucid/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yurihbmaciel.Lucid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ABF57D1E306D4D7D00E59258 /* Debug configuration for PBXNativeTarget "LucidTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YH282597XR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yurihbmaciel.LucidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lucid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lucid";
+			};
+			name = Debug;
+		};
+		ABF57D1F306D4D7D00E59258 /* Release configuration for PBXNativeTarget "LucidTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YH282597XR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yurihbmaciel.LucidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lucid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lucid";
+			};
+			name = Release;
+		};
+		ABF57D21306D4D7D00E59258 /* Debug configuration for PBXNativeTarget "LucidUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YH282597XR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yurihbmaciel.LucidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Lucid;
+			};
+			name = Debug;
+		};
+		ABF57D22306D4D7D00E59258 /* Release configuration for PBXNativeTarget "LucidUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YH282597XR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yurihbmaciel.LucidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Lucid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABF57CF6306D4D7C00E59258 /* Build configuration list for PBXProject "Lucid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF57D18306D4D7D00E59258 /* Debug configuration for PBXProject "Lucid" */,
+				ABF57D19306D4D7D00E59258 /* Release configuration for PBXProject "Lucid" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		ABF57D1A306D4D7D00E59258 /* Build configuration list for PBXNativeTarget "Lucid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF57D1B306D4D7D00E59258 /* Debug configuration for PBXNativeTarget "Lucid" */,
+				ABF57D1C306D4D7D00E59258 /* Release configuration for PBXNativeTarget "Lucid" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		ABF57D1D306D4D7D00E59258 /* Build configuration list for PBXNativeTarget "LucidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF57D1E306D4D7D00E59258 /* Debug configuration for PBXNativeTarget "LucidTests" */,
+				ABF57D1F306D4D7D00E59258 /* Release configuration for PBXNativeTarget "LucidTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		ABF57D20306D4D7D00E59258 /* Build configuration list for PBXNativeTarget "LucidUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF57D21306D4D7D00E59258 /* Debug configuration for PBXNativeTarget "LucidUITests" */,
+				ABF57D22306D4D7D00E59258 /* Release configuration for PBXNativeTarget "LucidUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABF57CF3306D4D7C00E59258 /* Project object */;
+	validationLevel = 1;
+}
