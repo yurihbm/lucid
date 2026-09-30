@@ -36,7 +36,8 @@ jobs:
           VERSION="${GITHUB_REF_NAME#v}"
           SHA256=$(shasum -a 256 Lucid.zip | cut -d ' ' -f1)
 
-          git clone "https://x-access-token:${GH_TOKEN}@github.com/yurihbm/homebrew-apps.git" tap
+          gh auth setup-git
+          gh repo clone yurihbm/homebrew-apps tap
           cd tap
 
           sed -i '' "s/version \".*\"/version \"$VERSION\"/" Casks/lucid.rb
