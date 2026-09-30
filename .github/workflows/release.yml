@@ -7,10 +7,16 @@ on:
 
 jobs:
   release:
-    uses: yurihbm/homebrew-app-release/.github/workflows/release.yml@6de084a11acfd478185d11b60f2de0113e3f5c2e # v1.1.0
+    runs-on: xcode-27
+    # Only v* tags may deploy to this environment; it holds HOMEBREW_TAP_TOKEN.
+    environment: main
     permissions:
       contents: write
-    with:
-      project: Lucid.xcodeproj
-      scheme: Lucid
-      cask: lucid
+
+    steps:
+      - uses: yurihbm/homebrew-app-release/release@v0.1.0
+        with:
+          project: Lucid.xcodeproj
+          scheme: Lucid
+          cask: lucid
+          tap-token: ${{ secrets.HOMEBREW_TAP_TOKEN }}

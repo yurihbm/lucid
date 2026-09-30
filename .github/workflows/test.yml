@@ -8,7 +8,10 @@ on:
 
 jobs:
   test:
-    uses: yurihbm/homebrew-app-release/.github/workflows/test.yml@6de084a11acfd478185d11b60f2de0113e3f5c2e # v1.1.0
-    with:
-      project: Lucid.xcodeproj
-      scheme: Lucid
+    runs-on: xcode-27
+
+    steps:
+      - uses: yurihbm/homebrew-app-release/test@v0.1.0
+        with:
+          project: Lucid.xcodeproj
+          scheme: Lucid
