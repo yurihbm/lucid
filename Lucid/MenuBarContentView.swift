@@ -10,14 +10,16 @@ struct MenuBarContentView: View {
     var launchAtLoginManager: LaunchAtLoginManager
 
     var body: some View {
-        Button(stateManager.isActive ? "menu.action.deactivate" : "menu.action.activate") {
-            stateManager.toggle()
-        }
+        Section("Lucid") {
+            Button(stateManager.isActive ? "menu.action.deactivate" : "menu.action.activate") {
+                stateManager.toggle()
+            }
 
-        Toggle("menu.action.launchAtLogin", isOn: Binding(
-            get: { launchAtLoginManager.isEnabled },
-            set: { _ in launchAtLoginManager.toggle() }
-        ))
+            Toggle("menu.action.launchAtLogin", isOn: Binding(
+                get: { launchAtLoginManager.isEnabled },
+                set: { _ in launchAtLoginManager.toggle() }
+            ))
+        }
 
         Divider()
 

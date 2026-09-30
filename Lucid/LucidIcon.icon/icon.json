@@ -2,13 +2,13 @@
   "fill" : "system-dark",
   "groups" : [
     {
+      "hidden" : false,
       "layers" : [
         {
-          "fill" : "none",
-          "image-name" : "eye.fill.svg",
-          "name" : "eye.fill",
+          "image-name" : "cup.and.saucer.fill.svg",
+          "name" : "cup.and.saucer.fill",
           "position" : {
-            "scale" : 0.94,
+            "scale" : 0.93,
             "translation-in-points" : [
               0,
               0

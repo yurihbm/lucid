@@ -15,7 +15,7 @@ struct LucidApp: App {
     var body: some Scene {
         MenuBarExtra(
             "Lucid",
-            systemImage: stateManager.isActive ? "eye.fill" : "eye.slash.fill"
+            systemImage: stateManager.isActive ? "cup.and.saucer.fill" : "cup.and.saucer"
         ) {
             MenuBarContentView(stateManager: stateManager, launchAtLoginManager: launchAtLoginManager)
         }
