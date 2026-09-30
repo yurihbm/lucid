@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: xcode-27
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Build
+        run: xcodebuild -project Lucid.xcodeproj -scheme Lucid -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO CONFIGURATION_BUILD_DIR=build build
+
+      - name: Zip .app
+        run: ditto -c -k --sequesterRsrc --keepParent build/Lucid.app Lucid.zip
+
+      - name: Create release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: Lucid.zip
+          generate_release_notes: true
