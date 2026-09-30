@@ -8,6 +8,7 @@ on:
 jobs:
   release:
     runs-on: xcode-27
+    environment: main
     permissions:
       contents: write
 
@@ -25,3 +26,21 @@ jobs:
         with:
           files: Lucid.zip
           generate_release_notes: true
+
+      - name: Update Homebrew cask
+        env:
+          GH_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          SHA256=$(shasum -a 256 Lucid.zip | cut -d ' ' -f1)
+
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/yurihbm/homebrew-apps.git" tap
+          cd tap
+
+          sed -i '' "s/version \".*\"/version \"$VERSION\"/" Casks/lucid.rb
+          sed -i '' "s/sha256 \".*\"/sha256 \"$SHA256\"/" Casks/lucid.rb
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "lucid $VERSION" || exit 0
+          git push
