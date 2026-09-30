@@ -14,6 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Archive
         run: xcodebuild -project Lucid.xcodeproj -scheme Lucid -configuration Release -archivePath build/Lucid.xcarchive CODE_SIGNING_ALLOWED=NO archive
