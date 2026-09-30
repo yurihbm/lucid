@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    uses: yurihbm/homebrew-app-release/.github/workflows/release.yml@aeecc50f0e87ca0d8f22203eacbe06afe221201c # v1.0.0
+    uses: yurihbm/homebrew-app-release/.github/workflows/release.yml@6de084a11acfd478185d11b60f2de0113e3f5c2e # v1.1.0
     permissions:
       contents: write
     with:
