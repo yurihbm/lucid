@@ -1,6 +1,6 @@
 ---
 name: release
-description: Tags the Lucid repo, which triggers CI to build an unsigned Release archive, publish a GitHub Release, and update the Homebrew tap. Use when the user asks to release, ship, publish, tag, or cut a new version of Lucid — e.g. "make a release", "ship v0.2.0", "publish a new build", "bump the version and release it".
+description: Tags the Lucid repo, which triggers CI to test and build an unsigned Release archive, publish a GitHub Release, and update the Homebrew tap. Use when the user asks to release, ship, publish, tag, or cut a new version of Lucid — e.g. "make a release", "ship v0.2.0", "publish a new build", "bump the version and release it".
 ---
 
 # Releasing Lucid
@@ -11,10 +11,11 @@ CI lives in `.github/workflows/`:
 
 - `test.yml` — runs `xcodebuild test` on every push/PR to `main`.
 - `release.yml` — runs on push of a `v*` tag. In order, it:
-  1. Archives with `xcodebuild archive -configuration Release CODE_SIGNING_ALLOWED=NO` — the same Release-optimized build that would ship to any store, just unsigned (no paid Apple Developer account yet).
-  2. Zips the `.app` out of the `.xcarchive` with `ditto`.
-  3. Publishes a GitHub Release with the zip attached and auto-generated release notes.
-  4. Updates `Casks/lucid.rb` in the [`yurihbm/homebrew-apps`](https://github.com/yurihbm/homebrew-apps) tap (version + sha256) and pushes, so `brew update` picks up the new version.
+  1. Runs the test suite; a failing test aborts the release.
+  2. Archives with `xcodebuild archive -configuration Release CODE_SIGNING_ALLOWED=NO` — the same Release-optimized build that would ship to any store, just unsigned (no paid Apple Developer account yet).
+  3. Zips the `.app` out of the `.xcarchive` with `ditto`.
+  4. Publishes a GitHub Release with the zip attached and auto-generated release notes.
+  5. Updates `Casks/lucid.rb` in the [`yurihbm/homebrew-apps`](https://github.com/yurihbm/homebrew-apps) tap (version + sha256) and pushes, so `brew update` picks up the new version.
 
 Both jobs run on the `xcode-27` GitHub-hosted runner label (arm64 only, currently in public preview) — `macos-latest` doesn't have Xcode 27 yet, which this project's `project.pbxproj` format requires.
 

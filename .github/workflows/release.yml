@@ -17,6 +17,9 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Test
+        run: xcodebuild test -project Lucid.xcodeproj -scheme Lucid -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO
+
       - name: Archive
         run: xcodebuild -project Lucid.xcodeproj -scheme Lucid -configuration Release -archivePath build/Lucid.xcarchive CODE_SIGNING_ALLOWED=NO archive
 
