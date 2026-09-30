@@ -87,7 +87,7 @@ The app icon is authored with [Icon Composer](https://developer.apple.com/icon-c
 
 ## Releasing
 
-Pushing a `v*` tag runs the tests, builds an unsigned Release archive, publishes it as a GitHub Release, and updates the [Homebrew tap](https://github.com/yurihbm/homebrew-apps) so `brew update` picks it up:
+Pushing a `v*` tag runs the tests, builds an ad-hoc signed Release archive, publishes it as a GitHub Release, and updates the [Homebrew tap](https://github.com/yurihbm/homebrew-apps) so `brew update` picks it up:
 
 ```sh
 git tag -m "vX.Y.Z" vX.Y.Z

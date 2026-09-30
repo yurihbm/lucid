@@ -21,7 +21,7 @@ jobs:
         run: xcodebuild test -project Lucid.xcodeproj -scheme Lucid -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO
 
       - name: Archive
-        run: xcodebuild -project Lucid.xcodeproj -scheme Lucid -configuration Release -archivePath build/Lucid.xcarchive CODE_SIGNING_ALLOWED=NO archive
+        run: xcodebuild -project Lucid.xcodeproj -scheme Lucid -configuration Release -archivePath build/Lucid.xcarchive CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM= MARKETING_VERSION="${GITHUB_REF_NAME#v}" archive
 
       - name: Zip .app
         run: ditto -c -k --sequesterRsrc --keepParent build/Lucid.xcarchive/Products/Applications/Lucid.app Lucid.zip
