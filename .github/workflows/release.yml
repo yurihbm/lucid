@@ -13,7 +13,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Archive
         run: xcodebuild -project Lucid.xcodeproj -scheme Lucid -configuration Release -archivePath build/Lucid.xcarchive CODE_SIGNING_ALLOWED=NO archive
@@ -22,7 +22,7 @@ jobs:
         run: ditto -c -k --sequesterRsrc --keepParent build/Lucid.xcarchive/Products/Applications/Lucid.app Lucid.zip
 
       - name: Create release
-        uses: softprops/action-gh-release@v3
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
         with:
           files: Lucid.zip
           generate_release_notes: true
