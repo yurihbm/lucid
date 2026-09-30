@@ -37,6 +37,22 @@
         }
       }
     },
+    "menu.action.launchAtLogin" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launch at Login"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar ao fazer login"
+          }
+        }
+      }
+    },
     "menu.action.quit" : {
       "localizations" : {
         "en" : {
