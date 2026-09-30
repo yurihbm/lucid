@@ -30,6 +30,17 @@ The name is a nod to *lucidity*: a system that's fully awake and aware, ready fo
 - macOS 27 or later
 - Xcode 27 or later
 
+## Installation
+
+Install via Homebrew:
+
+```sh
+brew tap yurihbm/apps
+brew install --cask lucid
+```
+
+Lucid isn't signed or notarized (no paid Apple Developer account yet), so the cask clears the quarantine flag automatically after install — no manual Gatekeeper workaround needed.
+
 ## Getting started
 
 1. Clone the repository.
@@ -73,3 +84,14 @@ User-facing strings live in `Lucid/Localizable.xcstrings` (English and Brazilian
 ### App icon
 
 The app icon is authored with [Icon Composer](https://developer.apple.com/icon-composer/) and lives at `Lucid/LucidIcon.icon`. Open it directly in Icon Composer to edit.
+
+## Releasing
+
+Pushing a `v*` tag builds an unsigned Release archive, publishes it as a GitHub Release, and updates the [Homebrew tap](https://github.com/yurihbm/homebrew-apps) so `brew update` picks it up:
+
+```sh
+git tag -m "vX.Y.Z" vX.Y.Z
+git push origin vX.Y.Z
+```
+
+See `AGENTS.md` for what the CI does under the hood.
