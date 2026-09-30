@@ -63,36 +63,7 @@ LucidUITests/     # UI tests
 
 ## Release process
 
-CI lives in `.github/workflows/`:
-
-- `test.yml` — runs `xcodebuild test` on every push/PR to `main`.
-- `release.yml` — runs on push of a `v*` tag.
-
-To cut a release:
-
-```sh
-git tag -m "vX.Y.Z" vX.Y.Z
-git push origin vX.Y.Z
-```
-
-`release.yml` then, in order:
-
-1. Archives with `xcodebuild archive -configuration Release CODE_SIGNING_ALLOWED=NO` — the same Release-optimized build that would ship to any store, just unsigned (no paid Apple Developer account yet).
-2. Zips the `.app` out of the `.xcarchive` with `ditto`.
-3. Publishes a GitHub Release with the zip attached and auto-generated release notes.
-4. Updates `Casks/lucid.rb` in the [`yurihbm/homebrew-apps`](https://github.com/yurihbm/homebrew-apps) tap (version + sha256) and pushes, so `brew update` picks up the new version.
-
-Both jobs run on the `xcode-27` GitHub-hosted runner label (arm64 only, currently in public preview) — `macos-latest` doesn't have Xcode 27 yet, which this project's `project.pbxproj` format requires.
-
-The Homebrew-cask-update step needs write access to a different repo (`homebrew-apps`), so it authenticates with `secrets.HOMEBREW_TAP_TOKEN` — a fine-grained PAT scoped only to that repo (`Contents: Read and write`) — via the `main` GitHub Environment. That environment's "Deployment branches and tags" rule is restricted to the `v*` tag pattern (not the `main` branch), since this job only ever runs on tag pushes.
-
-To delete and redo a release (e.g. after fixing the workflow):
-
-```sh
-gh release delete vX.Y.Z --cleanup-tag --yes
-git tag -m "vX.Y.Z" vX.Y.Z
-git push origin vX.Y.Z
-```
+Use the `release` skill (`.claude/skills/release/SKILL.md`) — invoked via `/release` — which covers how CI builds and ships a release and the tap-update mechanics.
 
 ## General engineering rules
 

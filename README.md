@@ -94,4 +94,4 @@ git tag -m "vX.Y.Z" vX.Y.Z
 git push origin vX.Y.Z
 ```
 
-See `AGENTS.md` for what the CI does under the hood.
+See `AGENTS.md` for what the CI does under the hood. Claude Code users can just run `/release`.

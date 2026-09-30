@@ -26,4 +26,5 @@ fastlane/test_output
 .DS_Store
 
 # Claude
-.claude
+.claude/*
+!.claude/skills/
